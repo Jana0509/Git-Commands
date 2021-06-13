@@ -1,0 +1,73 @@
+		
+		GIT COMMANDS :
+		-------------------
+		
+--------------------------------------------------------------------------------------------------------------------------
+		((Master Branch)
+
+#1. git init  inside the folder
+
+#2. Commit the changes to staging :
+
+	git add filename or git add .
+
+#3. Check the status of filename [which files needs to be commit]
+	git stats
+	
+#4. To commit the files to local repo
+	git commit -m "First Commit"
+	
+#5. Connect to Local Repo 
+	git remote add origin "git@github.com:JanarthananRavikumar/LearningRepo.git"
+	
+#6. Push the code to Git Repo
+	git push origin master
+
+----------------------------------------------------------------------------------------------------------------------------
+		(Master Branch)
+# To see different commits:
+ git log
+ git log --oneline
+ 
+# To go to the commit (Go back wards )  --> code will go back to old version when commit was made
+	git checkout commitno  
+
+# To return back to newer version of code
+	git checkout master 
+	
+# Undone the specific commit (eg., commitno2) [(it won't delete but it will create another commit which undo the previous change "commitno2" ]
+	git revert commitno
+	
+# Delete the specific commit (eg., commitno2)  [It can't be retrieved]
+	git reset commitno
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+	
+
+Creating Branches:
+
+# To create new branch :
+	git branch branchname
+
+# To see All branches name
+	git branch -a
+
+# To switch the branch
+	git checkout branchname
+
+# To delete specific branch :
+	git branch -d branchname
+	
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Merging branches: (eg., merging branch2 to master so that we can deploy the master branch to prod)
+
+
+#We need to be in the branch where we need to merge (eg., in this case its master)
+	1.git checkout master
+	2.git merge -featurea
+	3.git merge -featureb
+
+------------------------------------------------------------------------------------------------------------------------------------
+	
